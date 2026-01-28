@@ -1,0 +1,38 @@
+# Step 6: Executive Brief
+
+step_id: "06_brief"
+description: "Synthesize all analysis into concise, actionable brief"
+
+prompt: |
+  Synthesize all prior steps (filtered events, regime, policy impact, second-order,
+  scenarios) into a 3-5 minute executive brief.
+  
+  Structure:
+  1. TODAY'S HEADLINE (1-2 sentences)
+  2. MACRO REGIME (current state, confidence)
+  3. KEY DRIVERS (what matters most now)
+  4. POLICY IMPACT (if any policy moved today)
+  5. SCENARIO ODDS (probability of bull/base/bear)
+  6. WATCH LIST (next 30 days: indicators, announcements, risks to monitor)
+  7. CONSTRAINTS APPLIED (token usage, any steps skipped)
+  
+output_schema:
+  type: "object"
+  properties:
+    headline: { type: "string" }
+    regime: { type: "string" }
+    drivers: { type: "array", items: { type: "string" } }
+    scenario_odds:
+      type: "object"
+      properties:
+        bull: { type: "number" }
+        base: { type: "number" }
+        bear: { type: "number" }
+    watch_list:
+      type: "array"
+      items:
+        type: "object"
+        properties:
+          item: { type: "string" }
+          timing_days: { type: "integer" }
+    timestamp: { type: "string" }

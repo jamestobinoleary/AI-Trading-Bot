@@ -1,0 +1,36 @@
+# econ-llm: Configuration
+
+# API & Provider
+api:
+  provider: "openai"  # or "azure_openai"
+  model: "gpt-4o"
+  temperature: 0.7
+  max_tokens: 4000
+  
+# Cost & Resource Controls
+limits:
+  daily_token_budget: 100000  # tokens/day
+  execution_window_minutes: 60
+  max_retries: 3
+  timeout_seconds: 300
+
+# Paths
+paths:
+  prompts_dir: "./prompts"
+  data_dir: "./data"
+  archive_dir: "./data/archive"
+  events_dir: "./data/events"
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: "./logs/econ-llm.log"
+
+# Pipeline
+pipeline:
+  enabled_steps:
+    - fetch
+    - normalize
+    - run_llm
+    - validate
+    - shutdown

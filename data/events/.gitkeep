@@ -1,0 +1,27 @@
+# Example event snapshot for testing
+# In production, this would be populated by fetch.py
+
+date: 2026-01-28
+timestamp: 2026-01-28T08:30:00Z
+event_count: 3
+events:
+  - id: "fed_001"
+    source: "Federal Reserve"
+    category: "central_bank"
+    timestamp: 2026-01-28T08:15:00Z
+    description: "FOMC Chair hints at potential pivot in monetary policy stance"
+    tags: ["monetary_policy", "fed", "interest_rates"]
+    
+  - id: "bls_001"
+    source: "Bureau of Labor Statistics"
+    category: "labor"
+    timestamp: 2026-01-27T14:30:00Z
+    description: "Jobless claims rise to 300K, higher than expected"
+    tags: ["employment", "labor", "economic_data"]
+    
+  - id: "treasury_001"
+    source: "US Treasury"
+    category: "fiscal"
+    timestamp: 2026-01-28T10:00:00Z
+    description: "Treasury yields fall on Fed commentary; 10Y drops 15 bps"
+    tags: ["fiscal", "yields", "credit"]

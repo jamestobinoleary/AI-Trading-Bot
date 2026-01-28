@@ -1,0 +1,206 @@
+# Market Calendar Data Sources
+# Manual entry point for curating stock calendar events
+# Format is used when API quotas are exceeded or for curated data
+
+# ===== NASDAQ EVENTS =====
+nasdaq:
+  earnings:
+    # Apple Inc.
+    - ticker: AAPL
+      date: '2026-02-05'
+      description: 'Apple Q1 2026 Earnings (Preliminary date - TBA officially)'
+      metadata:
+        fiscal_quarter: Q1
+        fiscal_year: 2026
+        expected_time: 'After Market Close (4 PM ET)'
+        eps_estimate: 2.15
+        revenue_estimate: 95000000000
+    
+    # Microsoft Corporation
+    - ticker: MSFT
+      date: '2026-02-12'
+      description: 'Microsoft Q3 2026 Earnings (Projected)'
+      metadata:
+        fiscal_quarter: Q3
+        fiscal_year: 2026
+        expected_time: 'After Market Close'
+        eps_estimate: 3.10
+    
+    # Nvidia Corporation
+    - ticker: NVDA
+      date: '2026-01-30'
+      description: 'NVIDIA Q4 2025 Earnings'
+      metadata:
+        fiscal_quarter: Q4
+        fiscal_year: 2025
+        expected_time: 'After Market Close'
+        eps_estimate: 1.80
+        revenue_estimate: 35000000000
+    
+    # Tesla Inc.
+    - ticker: TSLA
+      date: '2026-01-29'
+      description: 'Tesla Q4 2025 Earnings'
+      metadata:
+        expected_time: 'After Market Close'
+        eps_estimate: 0.95
+        revenue_estimate: 27000000000
+    
+    # Amazon.com Inc.
+    - ticker: AMZN
+      date: '2026-02-03'
+      description: 'Amazon Q4 2025 Earnings'
+      metadata:
+        expected_time: 'After Market Close'
+        eps_estimate: 1.15
+  
+  dividends:
+    # Apple Inc.
+    - ticker: AAPL
+      date: '2026-02-12'
+      description: 'Apple Dividend Payment (Ex-date: 2026-02-09)'
+      metadata:
+        dividend_per_share: 0.25
+        record_date: '2026-02-09'
+        payment_date: '2026-02-12'
+        payment_frequency: 'Quarterly'
+    
+    # Microsoft Corporation
+    - ticker: MSFT
+      date: '2026-02-19'
+      description: 'Microsoft Dividend Payment'
+      metadata:
+        dividend_per_share: 0.68
+        record_date: '2026-02-10'
+        payment_date: '2026-02-19'
+        payment_frequency: 'Quarterly'
+
+# ===== FTSE EVENTS (UK Markets) =====
+ftse:
+  earnings:
+    # HSBC Holdings plc
+    - ticker: HSBA
+      date: '2026-02-23'
+      description: 'HSBC Full Year 2025 Results'
+      metadata:
+        fiscal_period: 'FY 2025'
+        market: 'London Stock Exchange'
+        expected_time: '7:00 AM GMT'
+        eps_estimate: 1.45
+        dividend_forecast: 0.50
+    
+    # Lloyds Banking Group plc
+    - ticker: LLOY
+      date: '2026-02-19'
+      description: 'Lloyds Q4 2025 & Full Year 2025 Results'
+      metadata:
+        fiscal_period: 'FY 2025'
+        market: 'London Stock Exchange'
+        eps_estimate: 0.32
+    
+    # Barclays PLC
+    - ticker: BARC
+      date: '2026-02-17'
+      description: 'Barclays Full Year 2025 Results'
+      metadata:
+        fiscal_period: 'FY 2025'
+        market: 'London Stock Exchange'
+        eps_estimate: 0.58
+    
+    # Unilever PLC
+    - ticker: ULVR
+      date: '2026-02-04'
+      description: 'Unilever Q4 2025 & Full Year 2025 Trading Update'
+      metadata:
+        fiscal_period: 'FY 2025'
+        market: 'London Stock Exchange'
+    
+    # Diageo PLC
+    - ticker: DGE
+      date: '2026-02-09'
+      description: 'Diageo H1 2026 Trading Update'
+      metadata:
+        fiscal_period: 'H1 2026'
+        market: 'London Stock Exchange'
+  
+  dividends:
+    # HSBC Holdings plc
+    - ticker: HSBA
+      date: '2026-04-08'
+      description: 'HSBC Dividend Payment (Final dividend 2025)'
+      metadata:
+        dividend_per_share: 0.30
+        ex_dividend_date: '2026-03-12'
+        payment_date: '2026-04-08'
+        payment_frequency: 'Interim/Final (Semi-annual)'
+    
+    # Shell PLC
+    - ticker: SHEL
+      date: '2026-03-19'
+      description: 'Shell Quarterly Dividend Payment'
+      metadata:
+        dividend_per_share: 0.24
+        ex_dividend_date: '2026-02-19'
+        payment_date: '2026-03-19'
+        payment_frequency: 'Quarterly'
+    
+    # BP PLC
+    - ticker: BP
+      date: '2026-03-25'
+      description: 'BP Quarterly Dividend Payment'
+      metadata:
+        dividend_per_share: 0.055
+        ex_dividend_date: '2026-02-20'
+        payment_date: '2026-03-25'
+        payment_frequency: 'Quarterly'
+
+# ===== ECONOMIC INDICATORS (Macro, affects both markets) =====
+economic:
+  - ticker: 'US.NFP'
+    date: '2026-02-06'
+    description: 'US Non-Farm Payroll (January 2026)'
+    metadata:
+      indicator_type: 'Employment'
+      country: 'United States'
+      forecast: 180000
+      previous: 227000
+      importance: 'High'
+  
+  - ticker: 'US.CPI'
+    date: '2026-02-11'
+    description: 'US Consumer Price Index (January 2026)'
+    metadata:
+      indicator_type: 'Inflation'
+      country: 'United States'
+      forecast: 3.1
+      previous: 3.2
+      importance: 'High'
+  
+  - ticker: 'US.PCE'
+    date: '2026-02-12'
+    description: 'US Personal Consumption Expenditures (January 2026)'
+    metadata:
+      indicator_type: 'Inflation'
+      country: 'United States'
+      forecast: 2.4
+      previous: 2.4
+      importance: 'High'
+  
+  - ticker: 'UK.INFLATION'
+    date: '2026-02-18'
+    description: 'UK Inflation Rate (January 2026)'
+    metadata:
+      indicator_type: 'Inflation'
+      country: 'United Kingdom'
+      forecast: 2.1
+      previous: 2.5
+      importance: 'High'
+  
+  - ticker: 'US.FED_RATE'
+    date: '2026-03-18'
+    description: 'FOMC Meeting & Interest Rate Decision'
+    metadata:
+      indicator_type: 'Monetary Policy'
+      country: 'United States'
+      expected_action: 'Decision expected (hold or cut)'
+      importance: 'Critical'

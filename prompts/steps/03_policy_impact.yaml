@@ -1,0 +1,40 @@
+# Step 3: Policy Impact Analysis
+
+step_id: "03_policy_impact"
+description: "Analyze direct & indirect effects of policy announcements"
+
+prompt: |
+  Given the macro regime and today's policy announcements, assess:
+  
+  1. DIRECT IMPACT
+     - What does policy do immediately? (rate cut → lower borrowing, etc.)
+     - Magnitude & timing
+     - Who benefits / loses?
+  
+  2. TRANSMISSION CHANNELS
+     - How does policy reach the real economy?
+     - Financial conditions → real rates → investment/consumption
+     - Credit creation → money supply
+     - Confidence/expectations shifts
+  
+  3. RISKS & SIDE EFFECTS
+     - Unintended consequences
+     - Lag & overshoots
+     - Fiscal dominance, debt dynamics, EM spillovers
+  
+output_schema:
+  type: "object"
+  properties:
+    policy_announcements:
+      type: "array"
+      items:
+        type: "object"
+        properties:
+          announcement: { type: "string" }
+          direct_effect: { type: "string" }
+          transmission_channels: { type: "array", items: { type: "string" } }
+          timeline_months: { type: "integer" }
+          confidence: { type: "number" }
+    side_effects:
+      type: "array"
+      items: { type: "string" }

@@ -1,0 +1,152 @@
+event_count: 12
+events:
+  AAPL:
+  - date: '2026-02-05'
+    description: Apple Q1 2026 Earnings (Preliminary date - TBA officially)
+    event_type: earnings
+    market: nasdaq
+    metadata:
+      eps_estimate: 2.15
+      expected_time: After Market Close (4 PM ET)
+      fiscal_quarter: Q1
+      fiscal_year: 2026
+      revenue_estimate: 95000000000
+    ticker: AAPL
+    timestamp: '2026-01-28T16:15:47.410695'
+  - date: '2026-02-12'
+    description: 'Apple Dividend Payment (Ex-date: 2026-02-09)'
+    event_type: dividend
+    market: nasdaq
+    metadata:
+      dividend_per_share: 0.25
+      payment_date: '2026-02-12'
+      payment_frequency: Quarterly
+      record_date: '2026-02-09'
+    ticker: AAPL
+    timestamp: '2026-01-28T16:15:47.410701'
+  AMZN:
+  - date: '2026-02-03'
+    description: Amazon Q4 2025 Earnings
+    event_type: earnings
+    market: nasdaq
+    metadata:
+      eps_estimate: 1.15
+      expected_time: After Market Close
+    ticker: AMZN
+    timestamp: '2026-01-28T16:15:47.410703'
+  MACRO:
+  - date: '2026-02-06'
+    description: US Non-Farm Payroll (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      forecast: 180000
+      importance: High
+      indicator_type: Employment
+      previous: 227000
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.410705'
+  - date: '2026-02-11'
+    description: US Consumer Price Index (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      forecast: 3.1
+      importance: High
+      indicator_type: Inflation
+      previous: 3.2
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.410707'
+  - date: '2026-02-12'
+    description: US Personal Consumption Expenditures (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      forecast: 2.4
+      importance: High
+      indicator_type: Inflation
+      previous: 2.4
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.410708'
+  - date: '2026-02-18'
+    description: UK Inflation Rate (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United Kingdom
+      forecast: 2.1
+      importance: High
+      indicator_type: Inflation
+      previous: 2.5
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.410710'
+  - date: '2026-03-18'
+    description: FOMC Meeting & Interest Rate Decision
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      expected_action: Decision expected (hold or cut)
+      importance: Critical
+      indicator_type: Monetary Policy
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.410711'
+  MSFT:
+  - date: '2026-02-12'
+    description: Microsoft Q3 2026 Earnings (Projected)
+    event_type: earnings
+    market: nasdaq
+    metadata:
+      eps_estimate: 3.1
+      expected_time: After Market Close
+      fiscal_quarter: Q3
+      fiscal_year: 2026
+    ticker: MSFT
+    timestamp: '2026-01-28T16:15:47.410713'
+  - date: '2026-02-19'
+    description: Microsoft Dividend Payment
+    event_type: dividend
+    market: nasdaq
+    metadata:
+      dividend_per_share: 0.68
+      payment_date: '2026-02-19'
+      payment_frequency: Quarterly
+      record_date: '2026-02-10'
+    ticker: MSFT
+    timestamp: '2026-01-28T16:15:47.410714'
+  NVDA:
+  - date: '2026-01-30'
+    description: NVIDIA Q4 2025 Earnings
+    event_type: earnings
+    market: nasdaq
+    metadata:
+      eps_estimate: 1.8
+      expected_time: After Market Close
+      fiscal_quarter: Q4
+      fiscal_year: 2025
+      revenue_estimate: 35000000000
+    ticker: NVDA
+    timestamp: '2026-01-28T16:15:47.410716'
+  TSLA:
+  - date: '2026-01-29'
+    description: Tesla Q4 2025 Earnings
+    event_type: earnings
+    market: nasdaq
+    metadata:
+      eps_estimate: 0.95
+      expected_time: After Market Close
+      revenue_estimate: 27000000000
+    ticker: TSLA
+    timestamp: '2026-01-28T16:15:47.410718'
+last_updated: '2026-01-28T16:15:47.412892'
+market: nasdaq
+tickers:
+- AAPL
+- AMZN
+- MACRO
+- MSFT
+- NVDA
+- TSLA

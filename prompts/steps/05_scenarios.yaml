@@ -1,0 +1,55 @@
+# Step 5: Forward Scenarios (Bull / Base / Bear)
+
+step_id: "05_scenarios"
+description: "Construct coherent forward scenarios over 6-12 months"
+
+prompt: |
+  Construct three forward scenarios (6–12 month horizon):
+  
+  BULL SCENARIO
+  - Policy succeeds in its intent
+  - No major unexpected shocks
+  - Positive feedback loops (confidence → spending → growth)
+  - Conditions that would make this likely
+  
+  BASE SCENARIO
+  - Moderate progress with friction
+  - Some headwinds emerge
+  - Mixed signals, delayed transmission
+  - Most likely given current structure
+  
+  BEAR SCENARIO
+  - Policy backfires or conditions worsen
+  - Negative feedback loops
+  - Tail risks materialize
+  - Specific triggers that could cause this
+  
+  For each:
+  - Describe macro outcome (growth, inflation, employment)
+  - Assign probability (must sum to ~100%)
+  - Key milestones / decision points
+  
+output_schema:
+  type: "object"
+  properties:
+    scenarios:
+      type: "array"
+      items:
+        type: "object"
+        properties:
+          scenario_name: { type: "string", enum: ["BULL", "BASE", "BEAR"] }
+          probability: { type: "number" }
+          macro_outcome:
+            type: "object"
+            properties:
+              growth_outlook: { type: "string" }
+              inflation_outlook: { type: "string" }
+              policy_response: { type: "string" }
+          key_risks: { type: "array", items: { type: "string" } }
+          decision_points:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                event: { type: "string" }
+                timing_months: { type: "integer" }

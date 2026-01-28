@@ -1,0 +1,44 @@
+# Whitelisted economic data sources
+# Only events from these sources are processed by the pipeline
+
+sources:
+  - name: "Federal Reserve"
+    category: "central_bank"
+    events:
+      - "FOMC meeting minutes"
+      - "Interest rate decision"
+      - "Employment report"
+      - "Inflation data (CPI/PCE)"
+
+  - name: "Bureau of Labor Statistics"
+    category: "labor"
+    events:
+      - "Non-farm payrolls"
+      - "Unemployment rate"
+      - "Wage growth"
+
+  - name: "US Treasury"
+    category: "fiscal"
+    events:
+      - "Debt issuance"
+      - "Budget announcements"
+      - "Yield curve data"
+
+  - name: "IMF / World Bank"
+    category: "global"
+    events:
+      - "Global growth forecasts"
+      - "Emerging market pressures"
+      - "Currency movements"
+
+  - name: "ECB"
+    category: "central_bank"
+    events:
+      - "Monetary policy decisions"
+      - "Eurozone inflation"
+
+  - name: "Research & Analysis"
+    category: "commentary"
+    events:
+      - "Academic research"
+      - "Think tank reports"

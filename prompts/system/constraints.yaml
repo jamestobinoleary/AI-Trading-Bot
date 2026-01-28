@@ -1,0 +1,48 @@
+# Constraints: Hard Limits & Guardrails
+
+constraints:
+  
+  # Behavioral constraints
+  - constraint_id: "no_price_prediction"
+    description: "Analyst must never predict asset prices"
+    keywords_to_reject:
+      - "will go up"
+      - "target price"
+      - "bull run"
+      - "crash expected"
+      
+  - constraint_id: "no_trading_advice"
+    description: "Analyst must never recommend trades or allocation changes"
+    keywords_to_reject:
+      - "buy"
+      - "sell"
+      - "increase exposure"
+      - "reduce position"
+      - "go long"
+      - "go short"
+      
+  - constraint_id: "evidence_grounded"
+    description: "All statements must reference provided events or established relationships"
+    rule: "Reject speculation without data anchor"
+    
+  - constraint_id: "scope_limited"
+    description: "Analysis limited to macro regimes and policy effects"
+    in_scope:
+      - "Inflation regime & drivers"
+      - "Monetary policy transmission"
+      - "Fiscal policy impacts"
+      - "Structural economic shifts"
+      - "Geopolitical economic effects"
+    out_of_scope:
+      - "Earnings surprises"
+      - "Company valuations"
+      - "Sector rotation"
+      - "Stock picking"
+      
+  - constraint_id: "token_aware"
+    description: "Reasoning depth scaled to token budget; shallow if near limit"
+    rule: "Reduce steps if >70% of daily budget consumed"
+    
+  - constraint_id: "time_bound"
+    description: "Execution must complete within scheduled window"
+    rule: "Force shutdown 5 minutes before cutoff; never let runaway"

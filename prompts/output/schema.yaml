@@ -1,0 +1,32 @@
+# Output Schema: Daily Brief YAML
+
+output_schema:
+  version: "1.0"
+  type: "daily_brief"
+  
+  structure:
+    metadata:
+      type: "object"
+      properties:
+        date: { type: "string", format: "YYYY-MM-DD" }
+        execution_time_seconds: { type: "number" }
+        tokens_used: { type: "integer" }
+        tokens_budget: { type: "integer" }
+        steps_completed: { type: "array", items: { type: "string" } }
+    
+    analysis:
+      type: "object"
+      properties:
+        filtered_events: { type: "array" }
+        macro_regime: { type: "object" }
+        policy_analysis: { type: "object" }
+        second_order_effects: { type: "array" }
+        scenarios: { type: "array" }
+        executive_brief: { type: "object" }
+    
+    metadata_end:
+      type: "object"
+      properties:
+        validation_passed: { type: "boolean" }
+        constraint_violations: { type: "array", items: { type: "string" } }
+        next_run: { type: "string", format: "YYYY-MM-DD HH:MM:SS" }

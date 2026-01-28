@@ -1,0 +1,37 @@
+# Step 2: Macro Regime Classification
+
+step_id: "02_macro_regime"
+description: "Classify current macro regime based on filtered events"
+
+prompt: |
+  Based on today's filtered events, classify the current macro regime:
+  
+  Regime types:
+  - INFLATIONARY: Rising inflation, policy tightening, stagflation risk
+  - DISINFLATIONARY: Easing pressure, demand slowdown, policy accommodation
+  - STRUCTURAL_SHIFT: Regime change (e.g., productivity shock, demographic shift)
+  - EQUILIBRIUM: Stable, no major pressure
+  - CRISIS: Systemic stress, liquidity concerns
+  
+  For each:
+  - Describe key drivers (from today's events)
+  - Assign confidence (0-100%)
+  - List leading/lagging indicators to watch
+  
+output_schema:
+  type: "object"
+  properties:
+    primary_regime:
+      type: "object"
+      properties:
+        regime: { type: "string" }
+        confidence: { type: "number", minimum: 0, maximum: 100 }
+        drivers: { type: "array", items: { type: "string" } }
+        duration_estimate_months: { type: "integer" }
+    secondary_regimes:
+      type: "array"
+      items:
+        type: "object"
+        properties:
+          regime: { type: "string" }
+          probability: { type: "number" }

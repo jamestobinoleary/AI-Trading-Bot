@@ -1,0 +1,105 @@
+event_count: 8
+events:
+  BP:
+  - date: '2026-03-25'
+    description: BP Quarterly Dividend Payment
+    event_type: dividend
+    market: ftse
+    metadata:
+      dividend_per_share: 0.055
+      ex_dividend_date: '2026-02-20'
+      payment_date: '2026-03-25'
+      payment_frequency: Quarterly
+    ticker: BP
+    timestamp: '2026-01-28T16:15:47.406658'
+  HSBA:
+  - date: '2026-04-08'
+    description: HSBC Dividend Payment (Final dividend 2025)
+    event_type: dividend
+    market: ftse
+    metadata:
+      dividend_per_share: 0.3
+      ex_dividend_date: '2026-03-12'
+      payment_date: '2026-04-08'
+      payment_frequency: Interim/Final (Semi-annual)
+    ticker: HSBA
+    timestamp: '2026-01-28T16:15:47.406666'
+  MACRO:
+  - date: '2026-02-06'
+    description: US Non-Farm Payroll (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      forecast: 180000
+      importance: High
+      indicator_type: Employment
+      previous: 227000
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.406669'
+  - date: '2026-02-11'
+    description: US Consumer Price Index (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      forecast: 3.1
+      importance: High
+      indicator_type: Inflation
+      previous: 3.2
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.406671'
+  - date: '2026-02-12'
+    description: US Personal Consumption Expenditures (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      forecast: 2.4
+      importance: High
+      indicator_type: Inflation
+      previous: 2.4
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.406673'
+  - date: '2026-02-18'
+    description: UK Inflation Rate (January 2026)
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United Kingdom
+      forecast: 2.1
+      importance: High
+      indicator_type: Inflation
+      previous: 2.5
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.406675'
+  - date: '2026-03-18'
+    description: FOMC Meeting & Interest Rate Decision
+    event_type: economic_indicator
+    market: nasdaq
+    metadata:
+      country: United States
+      expected_action: Decision expected (hold or cut)
+      importance: Critical
+      indicator_type: Monetary Policy
+    ticker: MACRO
+    timestamp: '2026-01-28T16:15:47.406676'
+  SHEL:
+  - date: '2026-03-19'
+    description: Shell Quarterly Dividend Payment
+    event_type: dividend
+    market: ftse
+    metadata:
+      dividend_per_share: 0.24
+      ex_dividend_date: '2026-02-19'
+      payment_date: '2026-03-19'
+      payment_frequency: Quarterly
+    ticker: SHEL
+    timestamp: '2026-01-28T16:15:47.406678'
+last_updated: '2026-01-28T16:15:47.411010'
+market: ftse
+tickers:
+- BP
+- HSBA
+- MACRO
+- SHEL

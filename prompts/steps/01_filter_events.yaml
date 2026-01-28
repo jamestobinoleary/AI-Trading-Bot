@@ -1,0 +1,31 @@
+# Step 1: Event Filtering & Prioritization
+
+step_id: "01_filter_events"
+description: "Filter raw events, remove duplicates/noise, rank by macro significance"
+
+prompt: |
+  Given the following raw economic events from today, filter and rank them by:
+  1. Macro significance (does it shape growth, inflation, or policy?)
+  2. Novelty (is this new information or expected?)
+  3. Jurisdiction (focus on US/developed markets; note EM separately)
+  
+  Reject:
+  - Corporate earnings
+  - Minor data revisions
+  - Routine announcements
+  
+  Output a ranked list (high→low significance) with brief rationale.
+
+output_schema:
+  type: "object"
+  properties:
+    filtered_events:
+      type: "array"
+      items:
+        type: "object"
+        properties:
+          rank: { type: "integer" }
+          event: { type: "string" }
+          source: { type: "string" }
+          significance: { type: "string", enum: ["high", "medium", "low"] }
+          rationale: { type: "string" }

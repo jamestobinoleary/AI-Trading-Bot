@@ -1,0 +1,34 @@
+# Execution Schedule: Daily Pipeline
+
+schedule:
+  name: "Daily Econ LLM Brief"
+  description: "Run daily economic analysis pipeline"
+  
+  # Timing
+  timezone: "America/New_York"
+  execution_time: "09:00"  # 9 AM ET, pre-market
+  frequency: "daily"
+  days_of_week:
+    - "Monday"
+    - "Tuesday"
+    - "Wednesday"
+    - "Thursday"
+    - "Friday"
+  
+  # Limits
+  max_duration_minutes: 60
+  timeout_minutes: 65
+  
+  # Retry policy
+  retry_on_failure: true
+  max_retries: 2
+  retry_delay_seconds: 300
+  
+  # Notifications
+  notify_on_completion: true
+  notify_on_failure: true
+  
+  # Artifact handling
+  save_output: true
+  output_format: "yaml"
+  archive_after_days: 90
